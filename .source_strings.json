@@ -1,0 +1,49 @@
+{
+ "phrases": [
+  {
+   "hashToText": {
+    "SpaokJAze/NmDau6SO5VXw==": "Edit {=src/App.tsx} and save to reload."
+   },
+   "filepath": "src/App.tsx",
+   "line_beg": 29,
+   "col_beg": 10,
+   "line_end": 31,
+   "col_end": 16,
+   "type": "text",
+   "desc": "more complex example",
+   "project": "",
+   "jsfbt": "Edit {=src/App.tsx} and save to reload."
+  },
+  {
+   "hashToText": {
+    "3pc/wPrcO9Av6cBJly1pZQ==": "src/App.tsx"
+   },
+   "filepath": "src/App.tsx",
+   "line_beg": 30,
+   "col_beg": 17,
+   "line_end": 30,
+   "col_end": 41,
+   "type": "text",
+   "desc": "In the phrase: \"Edit {=src/App.tsx} and save to reload.\"",
+   "project": "",
+   "jsfbt": "src/App.tsx"
+  },
+  {
+   "hashToText": {
+    "RqH6/1RO1wC8xRjKt95P5A==": "Learn React"
+   },
+   "filepath": "src/App.tsx",
+   "line_beg": 39,
+   "col_beg": 10,
+   "line_end": 39,
+   "col_end": 47,
+   "type": "text",
+   "desc": "example",
+   "project": "",
+   "jsfbt": "Learn React"
+  }
+ ],
+ "childParentMappings": {
+  "1": 0
+ }
+}

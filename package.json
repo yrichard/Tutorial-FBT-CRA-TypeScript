@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^5.6.4",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -10,16 +11,23 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "babel-plugin-fbt": "^0.14.1",
+    "babel-plugin-fbt-runtime": "^0.9.11",
+    "fbt": "^0.14.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "manifest": "babel-node node_modules/.bin/fbt-manifest --src src",
+    "collect-fbts": "babel-node node_modules/.bin/fbt-collect --pretty --manifest < .src_manifest.json > .source_strings.json",
+    "test-collect-fbts": "babel-node node_modules/.bin/fbt-collect --plugins @babel/plugin-syntax-flow --pretty --manifest < .src_manifest.json > .test_source_strings.json",
+    "translate-fbts": "babel-node node_modules/.bin/fbt-translate --translations translations/*.json --jenkins > src/translatedFbts.json"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,5 +43,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-typescript": "^7.9.0"
   }
 }
